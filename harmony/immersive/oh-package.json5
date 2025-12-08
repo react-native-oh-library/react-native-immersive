@@ -1,0 +1,13 @@
+{
+  "license": "MIT",
+  "devDependencies": {
+  },
+  "author": "",
+  "name": "@react-native-oh-tpl/react-native-immersive",
+  "description": "control full screen in ReactNative on harmony.",
+  "main": "ts.ts",
+  "version": "2.0.1-rc.1",
+  "dependencies": {
+    "@rnoh/react-native-openharmony": "0.72.58",
+  }
+}
