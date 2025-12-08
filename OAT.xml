@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration>
+	<oatconfig>
+	<licensefile>LICENSE</licensefile>
+		<filefilterlist>
+	
+		</filefilterlist>
+        <policylist>
+            <policy name="projectPolicy" desc="">
+                <policyitem type="license" name="MIT" path=".*" desc="license under the MIT"/>
+            </policy>
+        </policylist>
+	</oatconfig>
+</configuration>

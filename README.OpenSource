@@ -1,0 +1,11 @@
+[
+    {
+        "Name": "react-native-immersive",
+        "License": "MIT License",
+        "License File": "LICENSE",
+        "Version Number": "2.0.0",
+        "Owner" : "xiafeng@huawei.com",
+        "Upstream URL": "https://github.com/mockingbot/react-native-immersive",
+        "Description": "Add Toggle for Android Immersive FullScreen Layout"
+    }
+]
