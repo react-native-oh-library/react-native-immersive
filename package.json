@@ -1,9 +1,12 @@
 {
-  "name": "react-native-immersive",
-  "version": "2.0.0",
+  "name": "@react-native-ohos/react-native-immersive",
+  "version": "2.1.0-rc.1",
   "description": "Add Toggle for Android Immersive FullScreen Layout",
   "author": "MockingBot",
   "license": "MIT",
+  "harmony": {
+    "alias": "react-native-immersive"
+  },
   "keywords": [
     "react-component",
     "react-native",
@@ -16,9 +19,21 @@
   "main": "index.js",
   "scripts": {
     "publish-dev": "npm publish --tag dev --userconfig ~/mockingbot.npmrc",
-    "publish-latest": "npm publish --tag latest --userconfig ~/mockingbot.npmrc"
+    "publish-latest": "npm publish --tag latest --userconfig ~/mockingbot.npmrc",
+    "codegen-lib": "npx react-native codegen-lib-harmony --no-safety-check --npm-package-name @react-native-ohos/react-native-immersive --cpp-output-path ./harmony/immersive/src/main/cpp/generated --ets-output-path ./harmony/immersive/src/main/ets/generated --turbo-modules-spec-paths ./NativeRNImmersive.ts"
+
   },
   "peerDependencies": {
-    "react-native": ">=0.47.0"
+    "react-native": ">=0.47.0",
+    "react-native-immersive": "2.0.0"
+  },
+  "devDependencies": {
+    "@react-native-community/cli": "11.3.6",
+    "@types/react-native": "^0.72.8",
+    "react-native-harmony-cli": "npm:@react-native-oh/react-native-harmony-cli@^0.0.27"
+  },
+  "publishConfig": {
+    "registry": "https://registry.npmjs.org/",
+    "access": "public"
   }
 }
