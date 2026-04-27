@@ -5,7 +5,13 @@
   "author": "MockingBot",
   "license": "MIT",
   "harmony": {
-    "alias": "react-native-immersive"
+    "alias": "react-native-immersive",
+    "autolinking": {
+       "etsPackageClassName": "RNImmersivePackage",
+       "cppPackageClassName": "RNImmersivePackage",
+       "cmakeLibraryTargetName": "rnoh_immersive",
+       "ohPackageName": "@react-native-ohos/react-native-immersive"
+     }
   },
   "keywords": [
     "react-component",

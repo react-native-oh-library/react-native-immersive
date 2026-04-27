@@ -22,7 +22,7 @@
  * SOFTWARE.
  */
 
-import { RNPackage } from '@rnoh/react-native-openharmony/ts';
+import { RNOHPackage } from '@rnoh/react-native-openharmony';
 import { AnyThreadTurboModuleFactory, AnyThreadTurboModule } from '@rnoh/react-native-openharmony/ts';
 import { RNImmersiveModule } from './RNImmersiveModule';
 import { WorkerTurboModuleContext } from '@rnoh/react-native-openharmony/src/main/ets/RNOH/RNOHContext';
@@ -40,7 +40,7 @@ class RNImmersiveModulesFactory extends AnyThreadTurboModuleFactory {
   }
 }
 
-export class RNImmersivePackage extends RNPackage {
+export class RNImmersivePackage extends RNOHPackage {
   createAnyThreadTurboModuleFactory(ctx: WorkerTurboModuleContext): AnyThreadTurboModuleFactory {
     return new RNImmersiveModulesFactory(ctx);
   }
