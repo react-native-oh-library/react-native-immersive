@@ -1,6 +1,6 @@
 {
   "name": "@react-native-ohos/react-native-immersive",
-  "version": "2.2.0-beta.4",
+  "version": "2.2.1-rc.1",
   "description": "Add Toggle for Android Immersive FullScreen Layout",
   "author": "MockingBot",
   "license": "MIT",

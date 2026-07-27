@@ -6,7 +6,7 @@
   "name": "@react-native-ohos/react-native-immersive",
   "description": "control full screen in ReactNative on harmony.",
   "main": "index.ets",
-  "version": "2.2.0-beta.4",
+  "version": "2.2.1-rc.1",
   "dependencies": {
     "@rnoh/react-native-openharmony": "file:../react_native_openharmony"
   }
