@@ -7,7 +7,7 @@ const unSupportedError = __DEV__
 
 let isListenerEnabled = false
 
-let emitterSubscription=null;
+let emitterSubscriptions = [];
 
 const Immersive = {
   on: () => RNImmersive.setImmersive(true),
@@ -15,14 +15,22 @@ const Immersive = {
   setImmersive: (isOn) => RNImmersive.setImmersive(isOn),
   getImmersive: async () => RNImmersive.getImmersive(), // do not always match actual display state
   addImmersiveListener: (listener) => {
-  emitterSubscription=  DeviceEventEmitter.addListener('@@IMMERSIVE_STATE_CHANGED', listener)
+    const subscription = DeviceEventEmitter.addListener('@@IMMERSIVE_STATE_CHANGED', listener)
+    emitterSubscriptions.push(subscription)
     if (isListenerEnabled) return
     isListenerEnabled = true
     RNImmersive.addImmersiveListener()
   },
   removeImmersiveListener: (listener) => {
-    if(emitterSubscription!=null){
-      emitterSubscription.remove();
+    const index = emitterSubscriptions.findIndex(sub => sub.listener === listener)
+    if (index !== -1) {
+      emitterSubscriptions[index].remove()
+      emitterSubscriptions.splice(index, 1)
+    }
+    // 当所有监听器都移除后，停止原生轮询
+    if (emitterSubscriptions.length === 0) {
+      isListenerEnabled = false
+      RNImmersive.removeImmersiveListener()
     }
   }
 }
